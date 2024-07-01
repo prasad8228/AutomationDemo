@@ -17,7 +17,8 @@ public class BrowserTest {
 	public void getData()
 	{
 		System.out.println("Hello Guys");
-		System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
+System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+"\\src\\test\\resources\\executables\\chromedriver.exe");
+
 		WebDriver driver =new ChromeDriver();
 		driver.get("https://azuremydemo.azurewebsites.net/webapp/");
 		String text =driver.findElement(By.cssSelector("h1")).getText();
